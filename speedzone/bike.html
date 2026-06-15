@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Speed Zone Official – Marthandam's #1 Bike Tyres, Accessories, Modifications & Riding Gear Shop. 28788+ Tyres Sold."/>
+  <title>Speed Zone Official | Bike Shop – Marthandam</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Exo+2:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+</head>
+<body>
+
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-logo">
+      <img src="assets/logo.jfif" alt="Speed Zone" class="preloader-logo-img"/>
+    </div>
+    <div class="preloader-bar"><div class="preloader-fill" id="preloaderFill"></div></div>
+    <p class="preloader-text">LOADING BIKE SHOP...</p>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="Speed Zone" class="nav-logo-img"/>
+        <span class="logo-tag">OFFICIAL — BIKES</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"     class="nav-link active">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#products" class="nav-link">Products</a></li>
+        <li><a href="#emi"      class="nav-link">EMI</a></li>
+        <li><a href="#contact"  class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-right-btns">
+        <a href="car.html" class="nav-switch-btn">
+          <i class="fas fa-car"></i> Car Shop
+        </a>
+        <a href="https://wa.me/919999999999?text=Hi%20Speed%20Zone!%20I%20need%20your%20help." class="nav-cta" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+      <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <div class="hero-logo-wrap animate-fade-up">
+        <img src="assets/logo.png" alt="Speed Zone Official" class="hero-logo-img"/>
+      </div>
+      <div class="hero-badge animate-fade-up delay-1">
+        <i class="fas fa-motorcycle"></i> Speed Zone Official — Bike Shop
+      </div>
+      <h1 class="hero-title animate-fade-up delay-2">
+        <span class="ht-line">REDEFINE</span>
+        <span class="ht-line ht-accent">YOUR RIDE</span>
+      </h1>
+      <p class="hero-subtitle animate-fade-up delay-3">Tyres · Accessories · Modifications · Riding Gear</p>
+      <div class="hero-stat-pill animate-fade-up delay-4">
+        <span class="hsp-num" id="heroCounter">0</span>
+        <span class="hsp-label">TYRES SOLD &amp; COUNTING</span>
+      </div>
+      <div class="hero-btns animate-fade-up delay-5">
+        <a href="#products" class="btn btn-primary"><i class="fas fa-bolt"></i> Shop Now</a>
+        <a href="car.html"  class="btn btn-car-switch"><i class="fas fa-car"></i> Car Shop</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll Down</span>
+      <div class="scroll-arrow"></div>
+    </div>
+    <div class="hero-float float-1"><i class="fas fa-circle-dot"></i></div>
+    <div class="hero-float float-2"><i class="fas fa-gear"></i></div>
+    <div class="hero-float float-3"><i class="fas fa-bolt"></i></div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>⚡ 28788+ TYRES SOLD</span><span>🔥 BAJAJ EMI AVAILABLE</span>
+      <span>🏍️ BIKE MODIFICATIONS</span><span>🛡️ RIDING GEAR</span>
+      <span>🔧 BIKE ACCESSORIES</span><span>🌀 TRACK USED TYRES</span>
+      <span>⚡ 28788+ TYRES SOLD</span><span>🔥 BAJAJ EMI AVAILABLE</span>
+      <span>🏍️ BIKE MODIFICATIONS</span><span>🛡️ RIDING GEAR</span>
+      <span>🔧 BIKE ACCESSORIES</span><span>🌀 TRACK USED TYRES</span>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <section class="stats-section" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-icon"><i class="fas fa-circle-dot"></i></div><div class="stat-num" data-target="28788">0</div><div class="stat-label">Tyres Sold</div></div>
+        <div class="stat-card"><div class="stat-icon"><i class="fas fa-tools"></i></div><div class="stat-num" data-target="5">0</div><div class="stat-label">Bike Services</div></div>
+        <div class="stat-card"><div class="stat-icon"><i class="fas fa-users"></i></div><div class="stat-num" data-target="1500">0</div><div class="stat-label">Happy Riders</div></div>
+        <div class="stat-card"><div class="stat-icon"><i class="fas fa-star"></i></div><div class="stat-num" data-target="5">0</div><div class="stat-label">Star Rating</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">WHAT WE DO</p>
+        <h2 class="section-title">BIKE <span class="accent">SERVICES</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-tilt>
+          <div class="sc-glow"></div><div class="sc-icon"><i class="fas fa-road"></i></div>
+          <div class="sc-number">01</div><h3 class="sc-title">Track Used Tyres</h3>
+          <p class="sc-desc">Premium quality track-tested used tyres at budget-friendly prices. Inspected for safety.</p>
+          <a href="#products" class="sc-link">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-tilt>
+          <div class="sc-glow"></div><div class="sc-icon"><i class="fas fa-motorcycle"></i></div>
+          <div class="sc-number">02</div><h3 class="sc-title">Bike Accessories</h3>
+          <p class="sc-desc">Wide range of accessories from LED lights to performance upgrades for your bike.</p>
+          <a href="#products" class="sc-link">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card featured-card" data-tilt>
+          <div class="sc-glow"></div><div class="sc-badge">MOST LOVED</div>
+          <div class="sc-icon"><i class="fas fa-wrench"></i></div>
+          <div class="sc-number">03</div><h3 class="sc-title">Modifications</h3>
+          <p class="sc-desc">Full bike mods – exhausts, fairings, decals, wraps, suspension and more for the ultimate custom build.</p>
+          <a href="#products" class="sc-link">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-tilt>
+          <div class="sc-glow"></div><div class="sc-icon"><i class="fas fa-helmet-safety"></i></div>
+          <div class="sc-number">04</div><h3 class="sc-title">Riding Gear</h3>
+          <p class="sc-desc">Top-brand jackets, helmets, gloves and riding pants. Stay safe and look great.</p>
+          <a href="#products" class="sc-link">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-tilt>
+          <div class="sc-glow"></div><div class="sc-icon"><i class="fas fa-circle-dot"></i></div>
+          <div class="sc-number">05</div><h3 class="sc-title">New Tyres</h3>
+          <p class="sc-desc">Latest MRF, Apollo, CEAT, TVS and imported brands. Best grip, best price in Marthandam.</p>
+          <a href="#products" class="sc-link">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <!-- Car shop crosslink card -->
+        <div class="service-card car-crosslink-card" data-tilt onclick="window.location.href='car.html'">
+          <div class="sc-glow"></div><div class="sc-badge car-badge">VISIT</div>
+          <div class="sc-icon car-icon-s"><i class="fas fa-car"></i></div>
+          <div class="sc-number">→</div><h3 class="sc-title">Car Modifications</h3>
+          <p class="sc-desc">Looking for car mods? Visit Speed Zone Performance – our dedicated car customisation shop!</p>
+          <a href="car.html" class="sc-link car-sc-link">Visit Car Shop <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products-section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">BROWSE &amp; BUY</p>
+        <h2 class="section-title">BIKE <span class="accent">PRODUCTS</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="product-filters" id="productFilters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="new-tyres">New Tyres</button>
+        <button class="filter-btn" data-filter="used-tyres">Used Tyres</button>
+        <button class="filter-btn" data-filter="accessories">Accessories</button>
+        <button class="filter-btn" data-filter="modifications">Modifications</button>
+        <button class="filter-btn" data-filter="riding-gear">Riding Gear</button>
+      </div>
+      <div class="product-search">
+        <input type="search" id="bikeSearch" placeholder="Search bike products…" aria-label="Search bike products" autocomplete="off" />
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- EMI -->
+  <section class="emi-section" id="emi">
+    <div class="emi-bg-pattern"></div>
+    <div class="container">
+      <div class="emi-content">
+        <div class="emi-left">
+          <div class="emi-icon-wrap">
+            <div class="emi-spin-ring"></div>
+            <i class="fas fa-credit-card emi-main-icon"></i>
+          </div>
+        </div>
+        <div class="emi-right">
+          <p class="section-tag">EASY PAYMENT</p>
+          <h2 class="emi-title">BAJAJ <span class="accent">EMI</span> AVAILABLE</h2>
+          <p class="emi-desc">Don't let budget hold you back! Get your dream tyres, gear, and modifications on easy EMI with Bajaj Finserv.</p>
+          <div class="emi-steps">
+            <div class="emi-step"><div class="es-num">1</div><div class="es-text"><strong>Choose Your Product</strong><span>Pick any item from our store</span></div></div>
+            <div class="emi-step"><div class="es-num">2</div><div class="es-text"><strong>Select EMI Plan</strong><span>3, 6, 9 or 12 month options</span></div></div>
+            <div class="emi-step"><div class="es-num">3</div><div class="es-text"><strong>Quick Approval</strong><span>Instant approval on your Bajaj card</span></div></div>
+          </div>
+          <a href="https://wa.me/919999999999?text=Hi%20Speed%20Zone!%20I%20want%20to%20know%20about%20Bajaj%20EMI." class="btn btn-primary" target="_blank">
+            <i class="fab fa-whatsapp"></i> Ask About EMI
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">FIND US</p>
+        <h2 class="section-title">VISIT <span class="accent">SPEED ZONE</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="ci-card"><div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div><div class="ci-text"><h4>Address</h4><p>Speed Zone Official, Marthandam,<br/>Tamil Nadu – 629165, India</p></div></div>
+          <div class="ci-card"><div class="ci-icon"><i class="fab fa-whatsapp"></i></div><div class="ci-text"><h4>WhatsApp / Phone</h4><p><a href="https://wa.me/919999999999" target="_blank">+91 99999 99999</a></p></div></div>
+          <div class="ci-card"><div class="ci-icon"><i class="fab fa-instagram"></i></div><div class="ci-text"><h4>Instagram</h4><p><a href="https://www.instagram.com/speed_zone_official/" target="_blank">@speed_zone_official</a></p></div></div>
+          <div class="ci-card"><div class="ci-icon"><i class="fas fa-clock"></i></div><div class="ci-text"><h4>Working Hours</h4><p>Mon–Sat: 9AM–8PM &nbsp;|&nbsp; Sun: 10AM–5PM</p></div></div>
+          <a href="https://goo.gl/maps/gkR2WzhHA5qY9zth9" target="_blank" class="btn btn-primary directions-btn"><i class="fas fa-directions"></i> Get Directions</a>
+        </div>
+        <div class="contact-map">
+          <div class="map-frame">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.9!2d77.2503!3d8.3068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04f47e49b97b45%3A0x7d9e!2sMarthandam%2C%20Tamil%20Nadu%20629165!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Speed Zone Official Location"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-glow-top"></div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="assets/logo.png" alt="Speed Zone" class="footer-logo-img"/></div>
+          <p class="footer-tagline">Marthandam's Premier Bike Tyre & Customisation Shop</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/speed_zone_official/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/919999999999" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="car.html" class="social-link" title="Visit Car Shop"><i class="fas fa-car"></i></a>
+          </div>
+        </div>
+        <div class="footer-links"><h4>Quick Links</h4><ul>
+          <li><a href="#home">Home</a></li><li><a href="#services">Services</a></li>
+          <li><a href="#products">Products</a></li><li><a href="#emi">Bajaj EMI</a></li>
+          <li><a href="car.html">Car Shop →</a></li>
+        </ul></div>
+        <div class="footer-links"><h4>Services</h4><ul>
+          <li><a href="#services">Track Used Tyres</a></li><li><a href="#services">New Tyres</a></li>
+          <li><a href="#services">Accessories</a></li><li><a href="#services">Modifications</a></li>
+          <li><a href="#services">Riding Gear</a></li>
+        </ul></div>
+        <div class="footer-contact"><h4>Contact</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Marthandam, TN 629165</p>
+          <p><i class="fab fa-whatsapp"></i> +91 99999 99999</p>
+          <p><i class="fab fa-instagram"></i> @speed_zone_official</p>
+          <div class="footer-emi-badge"><i class="fas fa-credit-card"></i> Bajaj EMI Available</div>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 Speed Zone Official, Marthandam. Built with 🔥 for riders.</p></div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919999999999?text=Hi%20Speed%20Zone!" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i><span class="wf-pulse"></span></a>
+
+  <div class="modal-overlay" id="productModal">
+    <div class="modal-card" id="modalCard">
+      <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="js/particles.js"></script>
+  <script src="js/bike-products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

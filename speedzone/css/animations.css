@@ -1,0 +1,347 @@
+/* ============================================================
+   SPEED ZONE – animations.css
+   All keyframes, entrance animations & motion effects
+   ============================================================ */
+
+/* ── Keyframes ── */
+
+@keyframes marqueeScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollDrop {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.5); transform-origin: top; }
+  50%       { opacity: 1;   transform: scaleY(1);   transform-origin: top; }
+}
+
+@keyframes floatSpin {
+  0%   { transform: rotate(0deg)   translate(0, 0); }
+  50%  { transform: rotate(180deg) translate(10px, -10px); }
+  100% { transform: rotate(360deg) translate(0, 0); }
+}
+
+@keyframes floatBob {
+  0%, 100% { transform: translateY(0);   }
+  50%       { transform: translateY(-20px); }
+}
+
+@keyframes spinRing {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes pulsePing {
+  0%   { transform: scale(1);   opacity: 0.7; }
+  100% { transform: scale(2.2); opacity: 0;   }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; transform: translateY(0);     }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0);     }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0);    }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1);    }
+}
+
+@keyframes glitchClip {
+  0%   { clip-path: inset(0 0 96% 0); transform: translateX(-4px); }
+  10%  { clip-path: inset(30% 0 50% 0); transform: translateX(4px); }
+  20%  { clip-path: inset(60% 0 20% 0); transform: translateX(-2px); }
+  30%  { clip-path: inset(80% 0 5% 0);  transform: translateX(3px); }
+  40%  { clip-path: inset(10% 0 80% 0); transform: translateX(-3px); }
+  50%  { clip-path: inset(45% 0 40% 0); transform: translateX(2px); }
+  60%  { clip-path: inset(70% 0 15% 0); transform: translateX(-4px); }
+  70%  { clip-path: inset(20% 0 70% 0); transform: translateX(4px); }
+  80%  { clip-path: inset(55% 0 30% 0); transform: translateX(-2px); }
+  90%  { clip-path: inset(5% 0 90% 0);  transform: translateX(3px); }
+  100% { clip-path: inset(0 0 96% 0);   transform: translateX(0); }
+}
+
+@keyframes neonFlicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: 0 0 10px var(--fire), 0 0 30px var(--fire), 0 0 60px var(--fire);
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+    opacity: 0.6;
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% { box-shadow: 0 0 8px rgba(255,68,0,0.3);  border-color: rgba(255,68,0,0.3); }
+  50%       { box-shadow: 0 0 24px rgba(255,68,0,0.7); border-color: rgba(255,68,0,0.7); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position:  400px 0; }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cardFlip3d {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+@keyframes orbitDot {
+  0%   { transform: rotate(0deg)   translateX(80px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+}
+
+@keyframes bgPulse {
+  0%, 100% { opacity: 0.04; transform: scale(1); }
+  50%       { opacity: 0.08; transform: scale(1.05); }
+}
+
+@keyframes slideInFromBottom {
+  from { opacity: 0; transform: translateY(60px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)    scale(1); }
+}
+
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  14%       { transform: scale(1.08); }
+  28%       { transform: scale(1); }
+  42%       { transform: scale(1.05); }
+  70%       { transform: scale(1); }
+}
+
+/* ── Utility animation classes ── */
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.animate-fade-left  { opacity: 0; animation: fadeInLeft  0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.animate-fade-right { opacity: 0; animation: fadeInRight 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.animate-scale-in   { opacity: 0; animation: scaleIn     0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+
+/* ── Delay helpers ── */
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.30s; }
+.delay-3 { animation-delay: 0.45s; }
+.delay-4 { animation-delay: 0.60s; }
+.delay-5 { animation-delay: 0.75s; }
+.delay-6 { animation-delay: 0.90s; }
+
+/* ── Glitch on hero title ── */
+.hero-title::before,
+.hero-title::after {
+  content: attr(data-text);
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+}
+.hero-title::before {
+  color: var(--cyan);
+  animation: glitchClip 4s infinite linear alternate-reverse;
+  opacity: 0.05;
+}
+.hero-title::after {
+  color: var(--fire);
+  animation: glitchClip 3s infinite linear alternate;
+  opacity: 0.05;
+}
+
+/* ── Scroll-reveal base (JS adds .revealed) ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+              transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger children automatically */
+.stagger > *:nth-child(1)  { transition-delay: 0.00s; }
+.stagger > *:nth-child(2)  { transition-delay: 0.08s; }
+.stagger > *:nth-child(3)  { transition-delay: 0.16s; }
+.stagger > *:nth-child(4)  { transition-delay: 0.24s; }
+.stagger > *:nth-child(5)  { transition-delay: 0.32s; }
+.stagger > *:nth-child(6)  { transition-delay: 0.40s; }
+.stagger > *:nth-child(7)  { transition-delay: 0.48s; }
+.stagger > *:nth-child(8)  { transition-delay: 0.56s; }
+
+/* ── Neon text glow animation ── */
+.neon-flicker {
+  animation: neonFlicker 3s infinite alternate;
+}
+
+/* ── Card hover 3D tilt helper (applied via JS) ── */
+.tilt-active {
+  transition: transform 0.1s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+/* ── Shimmer loading state ── */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.03) 25%,
+    rgba(255,255,255,0.08) 50%,
+    rgba(255,255,255,0.03) 75%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* ── Button ripple ── */
+.btn-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  transform: scale(0);
+  animation: rippleEffect 0.6s linear;
+  pointer-events: none;
+}
+@keyframes rippleEffect {
+  to { transform: scale(4); opacity: 0; }
+}
+
+/* ── Product card entrance ── */
+@keyframes productCardIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0)    scale(1); }
+}
+.product-card {
+  animation: productCardIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ── Stat number count animation ── */
+.stat-num.counting {
+  animation: countUp 0.4s ease forwards;
+}
+
+/* ── Fire spark effect on hero-float elements ── */
+.hero-float {
+  animation-timing-function: ease-in-out;
+  will-change: transform;
+}
+
+/* ── Preloader bar fill ── */
+@keyframes preloaderFill {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+/* ── Page transition overlay ── */
+.page-transition {
+  position: fixed; inset: 0;
+  background: var(--black);
+  z-index: 9999;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  pointer-events: none;
+}
+.page-transition.enter {
+  animation: pageEnter 0.5s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+.page-transition.exit {
+  animation: pageExit 0.5s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+@keyframes pageEnter {
+  from { transform: scaleY(0); transform-origin: bottom; }
+  to   { transform: scaleY(1); transform-origin: bottom; }
+}
+@keyframes pageExit {
+  from { transform: scaleY(1); transform-origin: top; }
+  to   { transform: scaleY(0); transform-origin: top; }
+}
+
+/* ── Hover spark (decorative on product cards) ── */
+.spark {
+  position: absolute;
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--fire);
+  pointer-events: none;
+  animation: sparkFly 0.7s ease-out forwards;
+}
+@keyframes sparkFly {
+  0%   { opacity: 1; transform: scale(1) translate(0, 0); }
+  100% { opacity: 0; transform: scale(0) translate(var(--dx), var(--dy)); }
+}
+
+/* ── Gradient border animation ── */
+@keyframes gradientRotate {
+  from { --angle: 0deg; }
+  to   { --angle: 360deg; }
+}
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+.gradient-border-animate {
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+.gradient-border-animate::before {
+  content: '';
+  position: absolute; inset: -2px;
+  background: conic-gradient(from var(--angle), var(--fire), var(--gold), var(--cyan), var(--fire));
+  border-radius: inherit;
+  z-index: -1;
+  animation: gradientRotate 4s linear infinite;
+}

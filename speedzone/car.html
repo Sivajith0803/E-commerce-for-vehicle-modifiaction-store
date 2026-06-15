@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Speed Zone Performance – Marthandam's Premier Car Modification Shop. Alloy Wheels, Body Kits, Wraps, Tinting & More."/>
+  <title>Speed Zone Performance | Car Shop – Marthandam</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Exo+2:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/car.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+</head>
+<body>
+
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-logo">
+      <img src="assets/logo.jfif" alt="Speed Zone" class="preloader-logo-img"/>
+    </div>
+    <div class="preloader-bar"><div class="preloader-fill" id="preloaderFill"></div></div>
+    <p class="preloader-text">LOADING CAR SHOP...</p>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="Speed Zone" class="nav-logo-img"/>
+        <span class="logo-tag">PERFORMANCE — CARS</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"     class="nav-link active">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#products" class="nav-link">Products</a></li>
+        <li><a href="#contact"  class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-right-btns">
+        <a href="bike.html" class="nav-switch-btn bike-switch">
+          <i class="fas fa-motorcycle"></i> Bike Shop
+        </a>
+        <a href="https://wa.me/919999999999?text=Hi%20Speed%20Zone%20Performance!%20I%20need%20your%20help." class="nav-cta" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+      <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero car-hero" id="home">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-bg-grid car-grid"></div>
+    <div class="hero-content">
+      <div class="hero-logo-wrap animate-fade-up">
+        <img src="assets/logo.png" alt="Speed Zone Performance" class="hero-logo-img car-logo"/>
+      </div>
+      <div class="hero-badge car-badge-hero animate-fade-up delay-1">
+        <i class="fas fa-car"></i> Speed Zone Performance — Car Shop
+      </div>
+      <h1 class="hero-title animate-fade-up delay-2">
+        <span class="ht-line">ELEVATE</span>
+        <span class="ht-line ht-accent-car">YOUR CAR</span>
+      </h1>
+      <p class="hero-subtitle animate-fade-up delay-3">Alloy Wheels · Body Kits · Window Tinting · Wraps</p>
+      <div class="hero-stat-pill car-stat-pill animate-fade-up delay-4">
+        <span class="hsp-num car-hsp-num">NEW</span>
+        <span class="hsp-label">CAR CUSTOMISATION SHOP NOW OPEN!</span>
+      </div>
+      <div class="hero-btns animate-fade-up delay-5">
+        <a href="#products" class="btn btn-car-primary"><i class="fas fa-bolt"></i> Shop Now</a>
+        <a href="bike.html" class="btn btn-outline"><i class="fas fa-motorcycle"></i> Bike Shop</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint"><span>Scroll Down</span><div class="scroll-arrow"></div></div>
+    <div class="hero-float float-1" style="color:var(--car-color)"><i class="fas fa-car"></i></div>
+    <div class="hero-float float-2" style="color:var(--car-color)"><i class="fas fa-gear"></i></div>
+    <div class="hero-float float-3" style="color:var(--car-color)"><i class="fas fa-bolt"></i></div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee-strip car-marquee-strip">
+    <div class="marquee-track">
+      <span>🚗 SPEED ZONE PERFORMANCE</span><span>✨ ALLOY WHEELS &amp; FITMENT</span>
+      <span>🪟 WINDOW TINTING — 3M FILM</span><span>🎨 VINYL WRAPS &amp; BODY KITS</span>
+      <span>💡 LED UPGRADES</span><span>🏎️ CAR MODIFICATIONS MARTHANDAM</span>
+      <span>🚗 SPEED ZONE PERFORMANCE</span><span>✨ ALLOY WHEELS &amp; FITMENT</span>
+      <span>🪟 WINDOW TINTING — 3M FILM</span><span>🎨 VINYL WRAPS &amp; BODY KITS</span>
+      <span>💡 LED UPGRADES</span><span>🏎️ CAR MODIFICATIONS MARTHANDAM</span>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <section class="stats-section" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-icon"><i class="fas fa-car"></i></div><div class="stat-num" data-target="6">0</div><div class="stat-label">Car Services</div></div>
+        <div class="stat-card"><div class="stat-icon"><i class="fas fa-circle-half-stroke"></i></div><div class="stat-num" data-target="20">0</div><div class="stat-label">Products</div></div>
+        <div class="stat-card"><div class="stat-icon"><i class="fas fa-users"></i></div><div class="stat-num" data-target="500">0</div><div class="stat-label">Happy Clients</div></div>
+        <div class="stat-card"><div class="stat-icon"><i class="fas fa-star"></i></div><div class="stat-num" data-target="5">0</div><div class="stat-label">Star Rating</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">WHAT WE DO</p>
+        <h2 class="section-title">CAR <span class="accent">SERVICES</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-tilt>
+          <div class="sc-glow"></div><div class="sc-icon"><i class="fas fa-circle-half-stroke"></i></div>
+          <div class="sc-number">01</div><h3 class="sc-title">Alloy Wheels</h3>
+          <p class="sc-desc">Wide range of alloy wheel brands in 14"–18" sizes with professional fitting and balancing.</p>
+          <a href="#products" class="sc-link">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-tilt>
+          <div class="sc-glow"></div><div class="sc-icon"><i class="fas fa-window-maximize"></i></div>
+          <div class="sc-number">02</div><h3 class="sc-title">Window Tinting</h3>
+          <p class="sc-desc">3M & SunTek premium window film. Blocks 99% UV, reduces heat by 60%. 5-year warranty.</p>
+          <a href="#products" class="sc-link">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card featured-card" data-tilt>
+          <div class="sc-glow"></div><div class="sc-badge">POPULAR</div>
+          <div class="sc-icon"><i class="fas fa-paint-roller"></i></div>
+          <div class="sc-number">03</div><h3 class="sc-title">Car Wraps</h3>
+          <p class="sc-desc">Full & partial vinyl wraps in matte, gloss, satin and chrome finishes. Custom designs available.</p>
+          <a href="#products" class="sc-link">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-tilt>
+          <div class="sc-glow"></div><div class="sc-icon"><i class="fas fa-car-side"></i></div>
+          <div class="sc-number">04</div><h3 class="sc-title">Body Kits &amp; Spoilers</h3>
+          <p class="sc-desc">Sporty front lips, side skirts, rear spoilers and diffusers. Full body kit fitment available.</p>
+          <a href="#products" class="sc-link">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-tilt>
+          <div class="sc-glow"></div><div class="sc-icon"><i class="fas fa-lightbulb"></i></div>
+          <div class="sc-number">05</div><h3 class="sc-title">LED Upgrades</h3>
+          <p class="sc-desc">Headlight upgrades, underglow kits, DRL strips and interior ambient lighting for your car.</p>
+          <a href="#products" class="sc-link">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card featured-card" data-tilt>
+          <div class="sc-glow"></div><div class="sc-badge">NEW</div>
+          <div class="sc-icon"><i class="fas fa-couch"></i></div>
+          <div class="sc-number">06</div><h3 class="sc-title">Interior Makeover</h3>
+          <p class="sc-desc">Seat covers, steering wraps, dashboard mods, floor mats and full interior customisation.</p>
+          <a href="#products" class="sc-link">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products-section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">BROWSE &amp; BUY</p>
+        <h2 class="section-title">CAR <span class="accent">PRODUCTS</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="product-filters" id="productFilters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="wheels">Alloy Wheels</button>
+        <button class="filter-btn" data-filter="tinting">Tinting</button>
+        <button class="filter-btn" data-filter="wrap">Wraps</button>
+        <button class="filter-btn" data-filter="body">Body Kits</button>
+        <button class="filter-btn" data-filter="lighting">LED & Lighting</button>
+        <button class="filter-btn" data-filter="interior">Interior</button>
+      </div>
+      <!-- Search bar -->
+      <div class="product-search">
+        <input type="search" id="carSearch" placeholder="Search car products…" aria-label="Search car products" autocomplete="off" />
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="whyus-section" id="whyus">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">WHY CHOOSE US</p>
+        <h2 class="section-title">THE <span class="accent">PERFORMANCE</span> EDGE</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="whyus-grid">
+        <div class="wu-card"><div class="wu-icon"><i class="fas fa-shield-halved"></i></div><h3>Quality Parts</h3><p>Only premium brands and quality-checked parts are used on your vehicle. No compromise ever.</p></div>
+        <div class="wu-card"><div class="wu-icon"><i class="fas fa-user-gear"></i></div><h3>Expert Fitters</h3><p>Experienced technicians who know cars inside and out. Precision fitment every time.</p></div>
+        <div class="wu-card"><div class="wu-icon"><i class="fas fa-tags"></i></div><h3>Best Prices</h3><p>Competitive pricing on all modifications and accessories. Best value in Marthandam region.</p></div>
+        <div class="wu-card"><div class="wu-icon"><i class="fas fa-bolt"></i></div><h3>Quick Turnaround</h3><p>We respect your time. Most jobs done same day, so you drive away looking fresh.</p></div>
+        <div class="wu-card"><div class="wu-icon"><i class="fab fa-whatsapp"></i></div><h3>WhatsApp Orders</h3><p>Chat with us on WhatsApp to enquire, book or order products — we're always online.</p></div>
+        <div class="wu-card"><div class="wu-icon"><i class="fas fa-map-marker-alt"></i></div><h3>Marthandam Local</h3><p>Rooted in Marthandam. We know our community and take pride in every vehicle we touch.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">FIND US</p>
+        <h2 class="section-title">VISIT <span class="accent">SPEED ZONE</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="ci-card"><div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div><div class="ci-text"><h4>Address</h4><p>Speed Zone Performance, Marthandam,<br/>Tamil Nadu – 629165, India</p></div></div>
+          <div class="ci-card"><div class="ci-icon"><i class="fab fa-whatsapp"></i></div><div class="ci-text"><h4>WhatsApp / Phone</h4><p><a href="https://wa.me/919999999999" target="_blank">+91 99999 99999</a></p></div></div>
+          <div class="ci-card"><div class="ci-icon"><i class="fab fa-instagram"></i></div><div class="ci-text"><h4>Instagram</h4><p><a href="https://www.instagram.com/speed_zone_official/" target="_blank">@speed_zone_official</a></p></div></div>
+          <div class="ci-card"><div class="ci-icon"><i class="fas fa-clock"></i></div><div class="ci-text"><h4>Working Hours</h4><p>Mon–Sat: 9AM–8PM &nbsp;|&nbsp; Sun: 10AM–5PM</p></div></div>
+          <a href="https://goo.gl/maps/gkR2WzhHA5qY9zth9" target="_blank" class="btn btn-car-primary directions-btn"><i class="fas fa-directions"></i> Get Directions</a>
+        </div>
+        <div class="contact-map">
+          <div class="map-frame">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.9!2d77.2503!3d8.3068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04f47e49b97b45%3A0x7d9e!2sMarthandam%2C%20Tamil%20Nadu%20629165!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Speed Zone Performance Location"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-glow-top car-glow-top"></div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="assets/logo.png" alt="Speed Zone Performance" class="footer-logo-img"/></div>
+          <p class="footer-tagline">Marthandam's Premier Car Modification & Accessories Shop</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/speed_zone_official/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/919999999999" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="bike.html" class="social-link" title="Visit Bike Shop"><i class="fas fa-motorcycle"></i></a>
+          </div>
+        </div>
+        <div class="footer-links"><h4>Quick Links</h4><ul>
+          <li><a href="#home">Home</a></li><li><a href="#services">Services</a></li>
+          <li><a href="#products">Products</a></li><li><a href="bike.html">Bike Shop →</a></li>
+        </ul></div>
+        <div class="footer-links"><h4>Services</h4><ul>
+          <li><a href="#services">Alloy Wheels</a></li><li><a href="#services">Window Tinting</a></li>
+          <li><a href="#services">Car Wraps</a></li><li><a href="#services">Body Kits</a></li>
+          <li><a href="#services">LED Upgrades</a></li><li><a href="#services">Interior Mods</a></li>
+        </ul></div>
+        <div class="footer-contact"><h4>Contact</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Marthandam, TN 629165</p>
+          <p><i class="fab fa-whatsapp"></i> +91 99999 99999</p>
+          <p><i class="fab fa-instagram"></i> @speed_zone_official</p>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 Speed Zone Performance, Marthandam. Built with ⚡ for car enthusiasts.</p></div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919999999999?text=Hi%20Speed%20Zone%20Performance!" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i><span class="wf-pulse"></span></a>
+
+  <div class="modal-overlay" id="productModal">
+    <div class="modal-card" id="modalCard">
+      <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="js/particles.js"></script>
+  <script src="js/car-products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
